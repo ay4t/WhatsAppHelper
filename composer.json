@@ -1,0 +1,31 @@
+{
+    "authors": [
+        {
+            "email": "ayatulloh@gmail.com",
+            "homepage": "https://github.com/ay4t",
+            "name": "Ayatulloh Ahad R",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ay4t\\WhatsAppHelper\\": "src/"
+        }
+    },
+    "homepage": "https://github.com/ay4t/WhatsAppHelper",
+    "keywords": [
+        "whatsapp"
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "name": "ay4t/whatsapp-helper",
+    "prefer-stable": true,
+    "readme": "readme.md",
+    "require": {
+        "giggsey/libphonenumber-for-php": "8.9.9",
+        "guzzlehttp/guzzle": "v7.5.0"
+    },
+    "time": "2022-10-03 12:55:06",
+    "type": "library",
+    "version": "1.0.0"
+}
