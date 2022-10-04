@@ -6,6 +6,7 @@ module ini di buat untuk Framework codeigniter atau OOP PHP untuk mengirim pemne
 # Requirment
 
 # Cara Install
+``` composer require ay4t/whatsapp-helper:dev-main ```
 
 # Contoh Penggunaan
 Berikut adalah contoh penggunaan pada PHP
