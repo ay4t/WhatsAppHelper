@@ -17,6 +17,8 @@
  * Date      	By	Comments 
  
  * ----------	---	---------------------------------------------------------
+ * update:
+ * 1. menambahkan locale untuk kode negara. Default ID
  */
 
 namespace ay4t\WhatsAppHelper\Traits;
@@ -25,6 +27,13 @@ use Exception;
 
 trait FormatPhoneTrait
 {
+
+    /**
+     * @var string
+     * @author Ayatulloh Ahad R <ayatulloh@indiega.net>
+     */
+    protected $locale   = 'ID';
+
     /**
      * Helper berfungsi untuk memformat nomor telepon 
      *
@@ -39,11 +48,22 @@ trait FormatPhoneTrait
         $phoneUtil              = \libphonenumber\PhoneNumberUtil::getInstance();
         try {
 
-            $NumberFormat       = $phoneUtil->parse($phone, "ID");
+            $NumberFormat       = $phoneUtil->parse($phone, $this->locale);
             return $NumberFormat->getCountryCode() . $NumberFormat->getNationalNumber();
             var_dump($NumberFormat);
         } catch (\libphonenumber\NumberParseException $e) {
             throw new Exception($e->getMessage());
         }
     }
+
+	/**
+	 * Set the value of locale
+	 * @param   string  $locale  
+	 * @return  self
+	 */
+	public function setLocale(string $locale)
+	{
+		$this->locale = $locale;
+		return $this;
+	}
 }

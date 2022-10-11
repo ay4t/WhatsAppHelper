@@ -21,6 +21,24 @@ Berikut adalah contoh penggunaan pada PHP
 	    ->setMessage('test kirim wa?');
 	    
 	var_dump($wa->SendText());
+
+	/**
+	* jika anda menggunakan nomor diluar indonesia 
+	* Anda dapat mengatur locale dengan cara
+	* 
+	* catatan:
+	* lihat kode negara aplha-2-code di link berikut
+	* https://www.iban.com/country-codes
+	*/
+	$wa     = new WhatsAppSG();
+	$wa->setPort('6789')
+		->setLocale('US')
+		->setSenderPhone('085791555506')
+		->setRecepient('082255879157')
+		->setMessage('test kirim wa?');
+
+	var_dump($wa->SendText());
+
 	
 	/* ------------------------- contoh penggunaan kedua ------------------------ */
 	
