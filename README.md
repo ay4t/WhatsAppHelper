@@ -4,8 +4,15 @@ module untuk mengirim notifikasi WhatsApp menggunakan Whatsapp gateway service d
 module ini di buat untuk Framework codeigniter atau OOP PHP untuk mengirim pemneritahuan lewat WhatsApp service dengan POST data
 
 # Requirment
+1. composer
+2. nodeJs
+3. php-7.4 keatas
+4. Whatsapp yang sudah terinstall di HP Anda untuk proses scan
 
 # Cara Install
+Anda membutuhkan paket composer untuk memasang program ini, jika Anda belum memiliki composer silahkan download dan install di https://getcomposer.org/
+
+    composer require ay4t/whatsapp-helper:dev-main
 
 # Contoh Penggunaan
 Berikut adalah contoh penggunaan pada PHP
